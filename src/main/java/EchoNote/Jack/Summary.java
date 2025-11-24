@@ -3,6 +3,7 @@ package EchoNote.Jack;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.UUID;
 
 public class Summary {
     private final String id;
@@ -10,8 +11,21 @@ public class Summary {
     private final List<String> decisions = new ArrayList<>();
     private String notes;
 
+
     public Summary(String id) {
         this.id = id;
+    }
+
+
+    public Summary(List<String> topics, List<String> decisions, String notes) {
+        this(UUID.randomUUID().toString());
+        if (topics != null) {
+            this.topics.addAll(topics);
+        }
+        if (decisions != null) {
+            this.decisions.addAll(decisions);
+        }
+        this.notes = notes;
     }
 
     public String getId() {

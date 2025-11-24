@@ -16,6 +16,7 @@ public class MeetingRecord {
     private Transcript transcript;
     private Summary summary;
     private final List<ActionItem> actions = new ArrayList<>();
+    private String audioFilePath;
 
     public MeetingRecord() {
         this.id = UUID.randomUUID();
@@ -30,7 +31,7 @@ public class MeetingRecord {
         return title;
     }
 
-    void setTitle(String title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
@@ -38,16 +39,18 @@ public class MeetingRecord {
         return Collections.unmodifiableList(tags);
     }
 
-    void setTags(List<String> tags) {
+    public void setTags(List<String> tags) {
         this.tags.clear();
-        this.tags.addAll(tags);
+        if (tags != null) {
+            this.tags.addAll(tags);
+        }
     }
 
     public LocalDateTime getDate() {
         return date;
     }
 
-    void setDate(LocalDateTime date) {
+    public void setDate(LocalDateTime date) {
         this.date = date;
     }
 
@@ -67,9 +70,11 @@ public class MeetingRecord {
         return Collections.unmodifiableList(participants);
     }
 
-    void setParticipants(List<Participant> participants) {
+    public void setParticipants(List<Participant> participants) {
         this.participants.clear();
-        this.participants.addAll(participants);
+        if (participants != null) {
+            this.participants.addAll(participants);
+        }
     }
 
     public Transcript getTranscript() {
@@ -94,6 +99,17 @@ public class MeetingRecord {
 
     public void setActions(List<ActionItem> actionItems) {
         this.actions.clear();
-        this.actions.addAll(actionItems);
+        if (actionItems != null) {
+            this.actions.addAll(actionItems);
+        }
+    }
+
+
+    public String getAudioFilePath() {
+        return audioFilePath;
+    }
+
+    public void setAudioFilePath(String audioFilePath) {
+        this.audioFilePath = audioFilePath;
     }
 }

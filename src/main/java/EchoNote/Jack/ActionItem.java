@@ -1,6 +1,7 @@
 package EchoNote.Jack;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 public class ActionItem {
     private final String id;
@@ -15,6 +16,14 @@ public class ActionItem {
         this.owner = owner;
         this.dueDate = dueDate;
         this.status = ActionStatus.OPEN;
+    }
+
+
+    public ActionItem(String title, Participant owner, LocalDate dueDate, ActionStatus status) {
+        this(UUID.randomUUID().toString(), title, owner, dueDate);
+        if (status != null) {
+            this.status = status;
+        }
     }
 
     public String getId() {

@@ -3,6 +3,7 @@ package EchoNote.Jack;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.UUID;
 
 public class Transcript {
     private final String id;
@@ -15,6 +16,10 @@ public class Transcript {
         this.rawText = rawText;
         this.timestamps = new ArrayList<>(timestamps);
         this.source = source;
+    }
+
+    public Transcript(String rawText, TranscriptSource source) {
+        this(UUID.randomUUID().toString(), rawText, Collections.emptyList(), source);
     }
 
     public String getId() {
