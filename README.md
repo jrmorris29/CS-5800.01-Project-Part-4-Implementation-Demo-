@@ -38,3 +38,29 @@ mvn clean test
 3. **Run the EchoNote demo**
 
 EchoNote.App.AppMain
+
+
+
+
+
+
+
+##Team Delegation##
+
+I delegated **25%** of the workload to **Arpit**. This resulted in Arpit doing all of the Java files and unit test files in these packages:
+
+- `src/main/java/EchoNote/Arpit`
+- `src/test/java/EchoNote/Arpit`
+
+I delegated **25%** of the workload to **Mihail**. This resulted in Mihail doing all of the Java files and unit test files in these packages:
+
+- `src/main/java/EchoNote/Mihail`
+- `src/test/java/EchoNote/Mihail`
+
+I performed **50%** of the workload, taking on all of the Java files and unit test files in these packages:
+
+- `src/main/java/EchoNote/Jack`
+- `src/main/java/EchoNote/Config`
+- `src/main/java/EchoNote/App`
+- `src/test/java/EchoNote/Jack`
+
