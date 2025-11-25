@@ -45,7 +45,7 @@ EchoNote.App.AppMain
 
 
 
-##Team Delegation
+## Team Delegation
 
 I delegated **25%** of the workload to **Arpit**. This resulted in Arpit doing all of the Java files and unit test files in these packages:
 
